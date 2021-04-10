@@ -1,0 +1,24 @@
+import random
+
+def guess(x):   
+     guessing_number = random.randint(1,x)
+     print('guess a number between 1 and 100')
+    
+     guess = 0
+     guess_taken = 10
+     while guess != guessing_number :
+       guess = int(input('guess the number again'))
+       if guess <  guessing_number :   
+         print("you're guess is too low")
+       elif guess >  guessing_number : 
+         print(" you're guess is too high")
+       
+       guess_taken -= 1
+       print(f"you have {guess_taken} left")
+       
+       if guess_taken == 0 : 
+          print('you have lost') 
+          break 
+
+guess (10)         
+print("you;ve guessed it")   
